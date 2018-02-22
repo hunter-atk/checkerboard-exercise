@@ -15,6 +15,9 @@
 //
 // bodyElement.appendChild(box);
 
+
+
+
 let bodyStyle = {
   width: "1050px"
 }
@@ -22,21 +25,24 @@ let bodyStyle = {
 Object.assign(document.body.style, bodyStyle);
 
 for (var i = 0; i<49; i++){
+  var color = "#" + Math.floor(Math.random() * 16777216).toString(16);
+
    let bodyElement = document.getElementsByTagName('body')[0];
    let box = document.createElement('div');
    let myStyles = {
      width: "150px",
      height: "150px",
-     backgroundColor: "red",
+     backgroundColor: color,
      float: "left",
      // display: "table-cell",
     }
 
-    if(i%2 === 0){
-    myStyles.backgroundColor = "black";
-  }
+  //   if(i%2 === 0){
+  //   myStyles.backgroundColor = "black";
+  // }
    Object.assign(box.style, myStyles);
 
 bodyElement.appendChild(box);
+console.log(color);
 
    }
